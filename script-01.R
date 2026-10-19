@@ -1,14 +1,9 @@
-#######################################################
-#### Emiliano Calvo Alcaniz ###########################
-#######################################################
-############## Ch 1 ###################################
-####### What is the role of aggression ################
-####### in determining contest success? ###############
-#######################################################
-# Jan-2026
-#######################################################
+## Emiliano Calvo Alcaniz, Anna Dornhaus
+## (c) 2026
+## What is the role of aggression in determining contest success? 
 
-# Install / Open packages ------------------------------------
+# Setup ------------------------------------
+## Packages -------------------------
 library("tidyverse")
 library("googledrive")
 
@@ -17,18 +12,36 @@ library("googledrive")
 # Run this code, then log into google drive in order to access the data sheet
 drive_auth()
 
-## Import data sheets -----------------------------
-# Download images datasheet
+## Import datasheets -------------------------
+# Download aggr info datasheet, contains individual and colony info
 drive_download("aggr-ant-individuals", type = "csv", overwrite = TRUE)
-# rename to something easier to use
-# aggr-ant-individuals contains individual and colony info
-indivdf <- read.csv("aggr-ant-individuals.csv")
-
-# Download behavior datasheet
+# Download behavior datasheet, contains video behavior analysis
 drive_download("aggr-dyadic-contests", type = "csv", overwrite = TRUE)
-# rename to easier name
-# contains behaviors at different time points
+
+## Rename datasheets -------------------------
+indivdf <- read.csv("aggr-ant-individuals.csv")
 behaviordf <- read.csv("aggr-dyadic-contests.csv")
+
+# Data wrangling -------------------------
+## Data wrangling for indivdf -------------------------
+
+
+## Data wrangling for behaviordf -------------------------
+
+
+
+
+
+
+# Figures -------------------------
+## 
+
+
+
+# Stat analysis -------------------------
+
+
+
 
 
 
